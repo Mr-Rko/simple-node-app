@@ -42,7 +42,7 @@ If you prefer to use Docker, you can containerize and run the app easily.
 
 ###1️⃣ Build the Docker image
 ```bash
-docker build -t Dockerfile .
+docker build -t node-myapp .
 ```
 
 ###2️⃣ Run the Docker container
@@ -55,3 +55,14 @@ docker run -p 3000:3000 node-myapp
 Now open your browser and visit:
 
 http://localhost:3000
+
+🌟 Contributing
+
+Pull requests are welcome!
+If you have suggestions or improvements, feel free to open an issue or submit a PR.
+
+🧠 Author
+
+Omar Faruk
+💼 DevSecOps Engineer
+📧 of4689469@gmail.com
