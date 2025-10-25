@@ -1,0 +1,78 @@
+body {
+    background: #0f0f0f;
+    color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.neon {
+    font-size: 3rem;
+    color: #0ff;
+    text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    0% { text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff; }
+    100% { text-shadow: 0 0 20px #0ff, 0 0 40px #0ff, 0 0 60px #0ff; }
+}
+
+.quote, .weather {
+    font-style: italic;
+    margin-top: 5px;
+    color: #0ff;
+}
+
+h2 {
+    color: #0ff;
+    border-bottom: 1px solid #0ff;
+    padding-bottom: 5px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #111;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li.done span {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+button {
+    background: #0ff;
+    color: #000;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #00cfcf;
+}
+
+.form input {
+    padding: 5px;
+    border-radius: 3px;
+    border: none;
+    margin-right: 5px;
+}

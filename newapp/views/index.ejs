@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💡 Productivity Dashboard</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header>
+        <h1 class="neon">Personal Dashboard</h1>
+        <p class="quote">💬 "<%= quote %>"</p>
+        <% if(weather.temp) { %>
+        <p class="weather">🌤 <%= weather.city %>: <%= weather.temp %>°C, <%= weather.description %></p>
+        <% } %>
+    </header>
+
+    <main>
+        <section class="tasks">
+            <h2>📝 To-Do List</h2>
+            <form action="/add-task" method="POST" class="form">
+                <input type="text" name="task" placeholder="New Task" required>
+                <button>Add</button>
+            </form>
+            <ul>
+                <% tasks.forEach((task, i) => { %>
+                    <li class="<%= task.done ? 'done' : '' %>">
+                        <form action="/toggle-task" method="POST" style="display:inline">
+                            <input type="hidden" name="index" value="<%= i %>">
+                            <button type="submit">✔</button>
+                        </form>
+                        <span><%= task.text %></span>
+                        <form action="/delete-task" method="POST" style="display:inline">
+                            <input type="hidden" name="index" value="<%= i %>">
+                            <button type="submit">🗑</button>
+                        </form>
+                    </li>
+                <% }) %>
+            </ul>
+        </section>
+
+        <section class="notes">
+            <h2>📓 Notes</h2>
+            <form action="/add-note" method="POST" class="form">
+                <input type="text" name="note" placeholder="Write a note" required>
+                <button>Add</button>
+            </form>
+            <ul>
+                <% notes.forEach(note => { %>
+                    <li>📝 <%= note %></li>
+                <% }) %>
+            </ul>
+        </section>
+    </main>
+
+    <script src="/script.js"></script>
+</body>
+</html>
+
