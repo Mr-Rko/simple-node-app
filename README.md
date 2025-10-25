@@ -61,8 +61,3 @@ http://localhost:3000
 Pull requests are welcome!
 If you have suggestions or improvements, feel free to open an issue or submit a PR.
 
-🧠 Author
-
-Omar Faruk
-💼 DevSecOps Engineer
-📧 of4689469@gmail.com
